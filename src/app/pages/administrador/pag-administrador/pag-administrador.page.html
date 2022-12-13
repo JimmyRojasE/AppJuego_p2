@@ -1,81 +1,82 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-    Administrador
+    Admin
     </ion-title>
   </ion-toolbar>
   </ion-header>
   <ion-content [fullscreen]="true" class="background">
-    
+
     <div class="box1">
       <ion-button slot="primary" expand="block" color="primary"  id="Nuevo Usuario" (click)="crearUsuario()"  >
         Crear Nuevo Usuario
       </ion-button>
+      <br>
       <ion-item *ngFor= "let usuario of Usuarios" >
       <ion-card class="Login">
-        <ion-card-header>
-          <div class="card-title">Perfil: {{usuario.perfil}}</div>
-          <div class="card-title">Nombre: {{usuario.nombre}}</div>
-        </ion-card-header>
-
         <ion-card-content>
-        
-          <div class="card-subtitle">Apodo: {{usuario.apodo}}</div>
-          <div class="card-subtitle">Edad: {{usuario.edad}}</div>
-          <div class="card-subtitle">Celular: {{usuario.celular}}</div>
-          <div class="card-subtitle">Correo: {{usuario.correo}}</div>
-          
-        </ion-card-content>
-      
-                <ion-buttons class="btncentrado" >
-                               
-                  <ion-button slot="primary" color="primary" fill="outline" id="editar"  [routerLink]="['/editarUsuario',usuario.uid]" (click)="editarUser(usuario)">
-                    Editar
-                  </ion-button>
-                  <ion-button  slot="danger" color="danger" fill="outline" id="limpiar"  (click)=" eliminarUser(usuario)" >
-                    Eliminar
-                  </ion-button>
-                </ion-buttons>
-              </ion-card>
-        
-      </ion-item>
-
-    <ion-footer collapse="fade">
-      <ion-grid>
-        <ion-toolbar class="centrado">
-          <ion-title>Informaciones</ion-title>
-        </ion-toolbar>
-        <ion-toolbar>
-          <ion-row class="centrado">
-            <ion-col size="2">
-              <ion-icon name="mail-outline"></ion-icon>
-            </ion-col>
-            <ion-col size="10">
-              <label>contacto@appJuegos.cl</label>
-            </ion-col>
-           
-          </ion-row>
-          <ion-row justify-content-center class="centrado" >
-            <ion-col size="2">
-              <ion-icon name="call-outline"></ion-icon>
-            </ion-col>
-            <ion-col size="10">
-              <label>+56998870456</label>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col size="12" class="centrado">
-                <ion-icon name="navigate-outline"></ion-icon>
-                <label>&nbsp;Froilán Roa 7107, La Florida</label>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div class="card-title">Perfil: {{usuario.perfil}}</div>
+                <div class="card-title">Nombre: {{usuario.nombre}}</div>
               </ion-col>
-          </ion-row>
-        </ion-toolbar>
-      </ion-grid>
-    </ion-footer>
+              <ion-col>
+                <div class="card-subtitle">Apodo: {{usuario.apodo}}</div>
+                <div class="card-subtitle">Edad: {{usuario.edad}}</div>
+              </ion-col>
+              <ion-col>
+                <div class="card-subtitle">Celular: {{usuario.celular}}</div>
+                <div class="card-subtitle">Correo: {{usuario.correo}}</div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
 
-  </div>
+        </ion-card-content>
+
+        <ion-buttons class="btncentrado" >
+          <ion-button slot="primary" color="primary" fill="outline" id="editar"  [routerLink]="['/editarUsuario',usuario.uid]" (click)="editarUser(usuario)">
+            Editar
+          </ion-button>
+          <ion-button  slot="danger" color="danger" fill="outline" id="limpiar"  (click)=" eliminarUser(usuario)" >
+            Eliminar
+          </ion-button>
+        </ion-buttons>
+
+        </ion-card>
+
+      </ion-item>
+    </div>
   </ion-content>
-  
+
+<ion-footer collapse="fade">
+  <ion-row>
+    <ion-col>
+      <hr>
+      <ion-title>Informaciones</ion-title>
+    </ion-col>
+  </ion-row>
+  <hr>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="mail-outline"></ion-icon>
+      &nbsp;<label>contacto@appJuegos.cl</label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="call-outline"></ion-icon>
+      &nbsp;<label>+56998870456</label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="navigate-outline"></ion-icon>
+      &nbsp;<label>Froilán Roa 7107, La Florida</label>
+    </ion-col>
+  </ion-row>
+  <hr>
+</ion-footer>

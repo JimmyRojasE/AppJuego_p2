@@ -1,18 +1,19 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Detalle de Juego</ion-title>
-    
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="background">
   <ion-card class="card">
     <ion-card-header>
-    <img class="img" src="{{Juego.imgJuego}}" alt="">
-  </ion-card-header>
+      <img class="img" src="{{Juego.imgJuego}}" alt="">
+    </ion-card-header>
+
     <ion-card-content>
       <ion-list>
         <ion-item>
@@ -26,7 +27,7 @@
           <label>Fecha de Lanzamiento:</label>
           <ion-card-subtitle>{{Juego.fechaLanzamientoJuego}}</ion-card-subtitle>
         </ion-item>
-      
+
         <ion-item>
           <label>Tiempo de Juego: </label>
           <br>
@@ -36,22 +37,22 @@
           <label>Puntuación de la critica: </label>
           <ion-card-subtitle>{{Juego.PuntuacionCritica}}</ion-card-subtitle>
         </ion-item>
+
         <ion-item>
-          <label>Clasificación ESBR:</label> 
+          <label>Clasificación ESBR:</label>
           <ion-card-subtitle>{{Juego.clasificacionESBR}}</ion-card-subtitle>
         </ion-item>
-   
-    </ion-list>
-    <ion-buttons>
-    <ion-button  color="primary" fill="solid"  (click)="agregarFavorito()">
-      <ion-icon slot="start" name="star"></ion-icon>
-      
-    </ion-button>
-    <ion-button  color="secondary" fill="solid" [routerLink]="['/juegos']">
-      Volver
-    </ion-button>
-   
-  </ion-buttons>
-</ion-card-content>
+      </ion-list>
+
+      <ion-buttons>
+        <ion-button  color="primary" fill="solid"  (click)="agregarFavorito()">
+          <ion-icon slot="start" name="star"></ion-icon>
+        </ion-button>
+        <ion-button  color="secondary" fill="solid" [routerLink]="['/juegos']">
+          Volver
+        </ion-button>
+      </ion-buttons>
+
+    </ion-card-content>
   </ion-card>
 </ion-content>

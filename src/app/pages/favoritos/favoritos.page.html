@@ -1,41 +1,35 @@
-
-
-
-
-
-
 <div class="ion-page" id="main-content">
   <ion-header [translucent]="true">
-    <ion-toolbar>
+    <ion-toolbar color="dark">
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Favoritos</ion-title>
-      
+
     </ion-toolbar>
   </ion-header>
 
-  <ion-content class="bg-image ion-padding">
+  <ion-content [fullscreen]="true" class="background">
     <ion-grid>
       <ion-row>
         <ion-col *ngFor="let Favorito of Favoritos">
           <ion-card class="card" *ngIf="Favorito.Usuario.uid==User.uid">
             <ion-card-header>
-            <img class="img" src="{{Favorito.Juego.imgJuego}}" alt="">
-          </ion-card-header>
+              <img class="img" src="{{Favorito.Juego.imgJuego}}" alt="">
+            </ion-card-header>
             <ion-card-content>
               <ion-list>
                 <ion-card-title>{{Favorito.Juego.nombreJuego}}</ion-card-title>
                 <label>Fecha de Lanzamiento:</label>
                 <ion-card-subtitle>{{Favorito.Juego.fechaLanzamientoJuego}}</ion-card-subtitle>
-           
+
               </ion-list>
             <ion-buttons>
             <ion-button  color="primary" fill="solid" (click)="delFavorito(Favorito)"  >
-              Quitar Favorito              
+              Quitar Favorito
             </ion-button>
-            
-           
+
+
           </ion-buttons>
         </ion-card-content>
           </ion-card>

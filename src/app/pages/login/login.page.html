@@ -1,24 +1,25 @@
 
+
+<link href="https://fonts.cdnfonts.com/css/karmatic-arcade" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/gameovercre" rel="stylesheet">
+
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Login</ion-title>
-    
   </ion-toolbar>
 </ion-header>
 
+  <ion-content [fullscreen]="true" class="background">
+    <ion-card>
+      <ion-card-header>
+          <ion-card-title>Bienvenidx!</ion-card-title>
+          <ion-card-subtitle>Inicia sesion</ion-card-subtitle>
+      </ion-card-header>
 
-  <ion-content>
-   
-        <ion-row>
-          <ion-col size="9">
-            <ion-card-title>Bienvenido</ion-card-title>
-            <ion-card-title>AppJuegos</ion-card-title>
-          </ion-col>
-        </ion-row>
-        
+      <ion-card-content>
         <form (submit)="validarLogin()" [formGroup] = "formLogin">
           <ion-item>
             <ion-label position="floating">Ingrese Mail</ion-label>
@@ -30,41 +31,38 @@
             <ion-input type="password" formControlName="contraseña">
             </ion-input>
           </ion-item>
-          
-          <ion-button type="submit">Iniciar Sesion</ion-button>
+          <ion-button type="submit" color="dark">Ingresar</ion-button>
         </form>
-      
+      </ion-card-content>
+    </ion-card>
   </ion-content>
 
+
 <ion-footer collapse="fade">
-  <ion-grid>
-    <ion-toolbar class="centrado">
+  <ion-row>
+    <ion-col>
+      <hr>
       <ion-title>Informaciones</ion-title>
-    </ion-toolbar>
-    <ion-toolbar>
-      <ion-row class="centrado">
-        <ion-col size="2">
-          <ion-icon name="mail-outline"></ion-icon>
-        </ion-col>
-        <ion-col size="10">
-          <label>contacto@appJuegos.cl</label>
-        </ion-col>
-       
-      </ion-row>
-      <ion-row justify-content-center class="centrado" >
-        <ion-col size="2">
-          <ion-icon name="call-outline"></ion-icon>
-        </ion-col>
-        <ion-col size="10">
-          <label>+56998870456</label>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-          <ion-col size="12" class="centrado">
-            <ion-icon name="navigate-outline"></ion-icon>
-            <label>&nbsp;Froilán Roa 7107, La Florida</label>
-          </ion-col>
-      </ion-row>
-    </ion-toolbar>
-  </ion-grid>
+    </ion-col>
+  </ion-row>
+  <hr>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="mail-outline"></ion-icon>
+      &nbsp;<label>contacto@appJuegos.cl</label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="call-outline"></ion-icon>
+      &nbsp;<label>+56998870456</label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="navigate-outline"></ion-icon>
+      &nbsp;<label>Froilán Roa 7107, La Florida</label>
+    </ion-col>
+  </ion-row>
+  <hr>
 </ion-footer>
