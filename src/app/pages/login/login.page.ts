@@ -62,6 +62,8 @@ export class LoginPage implements OnInit {
         this.limpiarFormulario();
         this.serAlert.alertAprobada("Ingreso Valido");
         this.router.navigate(['home'])
+        console.log("Estoy login");
+        
         return;
       }
       else{

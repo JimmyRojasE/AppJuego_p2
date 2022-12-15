@@ -64,11 +64,13 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),canActivate:[Guard1Guard]
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
+    canActivate:[Guard1Guard]
   },
   {
     path: 'pagAdministrador',
-    loadChildren: () => import('./pages/administrador/pag-administrador/pag-administrador.module').then( m => m.PagAdministradorPageModule),canActivate:[Guard1Guard,Guard2Guard]
+    loadChildren: () => import('./pages/administrador/pag-administrador/pag-administrador.module').then( m => m.PagAdministradorPageModule),
+    canActivate:[Guard1Guard,Guard2Guard]
   },
   {
     path: 'detalleJuego/:id',
