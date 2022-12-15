@@ -1,64 +1,67 @@
 <ion-app>
   <ion-menu menuId="main-menu" content-id="main">
+
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color="dark">
         <ion-row>
           <ion-col>
-            <ion-title>AppJuegos</ion-title>
+            <ion-title class="bigfont">ARCADE</ion-title>
           </ion-col>
-          <ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="smallfont">
             <img src="../assets/icon/icono.png" style="height: 40px; width:60px">
             {{(UserObservado$|async).nombre}}
           </ion-col>
         </ion-row>
-                
       </ion-toolbar>
     </ion-header>
-    <ion-content >
-          
+
+    <ion-content>
+
       <ion-list>
         <ion-menu-toggle *ngIf="logeado" >
-          <ion-item routerLink="/home">
+          <ion-item color="dark" routerLink="/home">
             <ion-icon name="home-outline"></ion-icon>
-            <ion-label>&nbsp;Home</ion-label>
+            <ion-label class="smallfont">&nbsp;Home</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle *ngIf="!logeado">
-          <ion-item routerLink="/login">
+          <ion-item color="dark" routerLink="/login">
             <ion-icon name="person-circle-outline"></ion-icon>
-            <ion-label>&nbsp;Login</ion-label>
+            <ion-label class="smallfont">&nbsp;Login</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle *ngIf="logeado" >
-          <ion-item routerLink="/juegos">
+          <ion-item color="dark" routerLink="/juegos">
             <ion-icon name="beer-outline"></ion-icon>
-            <ion-label>&nbsp;Ver Juegos</ion-label>
+            <ion-label class="smallfont">&nbsp;Ver Juegos</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle *ngIf="logeado">
-          <ion-item routerLink="/favoritos">
+          <ion-item color="dark" routerLink="/favoritos">
             <ion-icon name="heart-outline"></ion-icon>
-            <ion-label>&nbsp;Favoritos</ion-label>
+            <ion-label class="smallfont">&nbsp;Favoritos</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <div >{{user.perfil}}
         <ion-menu-toggle *ngIf="logeado && admin">
-          <ion-item routerLink="/pagAdministrador">
+          <ion-item color="dark" routerLink="/pagAdministrador">
             <ion-icon name="alert-circle-outline"></ion-icon>
-            <ion-label>&nbsp;Administrador</ion-label>
+            <ion-label class="smallfont">&nbsp;Administrador</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </div>
         <ion-menu-toggle  *ngIf="logeado">
-          <ion-item routerLink="/perfil">
+          <ion-item color="dark" routerLink="/perfil">
             <ion-icon name="person-outline"></ion-icon>
-            <ion-label>&nbsp;Perfil Usuario</ion-label>
+            <ion-label class="smallfont">&nbsp;Perfil Usuario</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle *ngIf="logeado">
-          <ion-item (click)="Logout()" routerLink="/login">
+          <ion-item color="dark" (click)="Logout()" routerLink="/login">
             <ion-icon name="exit-outline"></ion-icon>
-            <ion-label>&nbsp;Salir</ion-label>
+            <ion-label class="samllfont">&nbsp;Salir</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

@@ -1,46 +1,40 @@
-
-
-
-
-
-
 <div class="ion-page" id="main-content">
   <ion-header [translucent]="true">
-    <ion-toolbar>
+    <ion-toolbar color="dark">
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Juegos</ion-title>
-      
+
     </ion-toolbar>
   </ion-header>
 
-  <ion-content class="bg-image ion-padding">
+  <ion-content [fullscreen]="true" class="background">
     <ion-grid>
       <ion-row>
         <ion-col *ngFor="let juego of juegos">
+
           <ion-card class="card">
             <ion-card-header>
-            <img class="img" src="{{juego.background_image}}" alt="">
-          </ion-card-header>
+              <img class="img" src="{{juego.background_image}}" alt="">
+            </ion-card-header>
+
             <ion-card-content>
               <ion-list>
-              <ion-card-title>{{juego.name}}</ion-card-title>
-              <label>Fecha de Lanzamiento:</label>
-              <ion-card-subtitle>{{juego.released}}</ion-card-subtitle>
-           
-            </ion-list>
-            <ion-buttons>
-            <ion-button  color="primary" fill="solid"  (click)="agregarFavorito(juego)">
-              <ion-icon slot="start" name="star"></ion-icon>
-              
-            </ion-button>
-            <ion-button  color="secondary" fill="solid" (click)="detalleJuego(juego)" [routerLink]="['/detalleJuego',juego.id ]">
-              Ver Detalle
-            </ion-button>
-           
-          </ion-buttons>
-        </ion-card-content>
+                <ion-card-title>{{juego.name}}</ion-card-title>
+                  <label>Fecha de Lanzamiento:</label>
+                  <ion-card-subtitle>{{juego.released}}</ion-card-subtitle>
+              </ion-list>
+
+              <ion-buttons>
+                <ion-button  color="primary" fill="solid"  (click)="agregarFavorito(juego)">
+                  <ion-icon slot="start" name="star"></ion-icon>
+                </ion-button>
+                <ion-button  color="secondary" fill="solid" (click)="detalleJuego(juego)" [routerLink]="['/detalleJuego',juego.id ]">
+                  Ver Detalle
+                </ion-button>
+              </ion-buttons>
+            </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>

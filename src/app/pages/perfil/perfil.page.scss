@@ -1,0 +1,64 @@
+ion-header ion-title{
+  font-family: 'Karmatic Arcade', sans-serif;
+}
+
+ion-card{
+  background-color:rgba(0, 0, 0, 0.83);
+  border-radius: 20px;
+  display: block;
+  align-items: center;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+ion-card-header{
+  text-align: center;
+  font-family: 'Karmatic Arcade', sans-serif;
+  padding: auto;
+  ion-card-title{
+    color: violet;
+  }
+  ion-card-subtitle{
+    color: aqua;
+  }
+}
+
+ion-card-content{
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+  padding-top: 2%;
+  ion-list ion-item .card-subtitle{
+    font-family: 'gameovercre', sans-serif;
+  }
+  ion-button{
+    font-family: 'Karmatic Arcade', sans-serif;
+    margin: auto;
+    display: block;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5px;
+  }
+}
+
+ion-footer{
+  background-color: black;
+  margin: 0;
+  padding-right: 5%;
+  padding-left: 5%;
+  color: gray;
+  ion-title{
+    text-align: center;
+    font-family: 'Karmatic Arcade', sans-serif;
+    font-size: medium;
+    padding: 0;
+  }
+  label{
+    font-family: 'gameovercre', sans-serif;
+  }
+}
+
+  ion-content.background{
+  --background: url(https://wallpaperaccess.com/full/4910984.gif) 0 0/100% 100% no-repeat;
+}

@@ -1,22 +1,22 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Administrador
+      Admin
     </ion-title>
   </ion-toolbar>
   </ion-header>
   <ion-content [fullscreen]="true" class="background">
-  
+
     <div class="box2">
       <ion-card class="Login">
         <ion-card-header>
           <ion-card-title>Crear Usuario</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-        
+
           <form [formGroup]="formUser">
             <ion-item>
               <ion-label position="floating">Ingrese Correo</ion-label>
@@ -34,7 +34,7 @@
                 <ion-select-option  value="Cliente">Cliente</ion-select-option>
                 <ion-select-option  value="Administrador">Admin</ion-select-option>
               </ion-select>
-              
+
             </ion-item>
               <ion-item>
                 <ion-label position="floating">Ingrese Nombre</ion-label>
@@ -56,14 +56,14 @@
                 <ion-input type="number" formControlName="celular">
                 </ion-input>
               </ion-item>
-              
-              
-              
-          </form>    
+
+
+
+          </form>
           <br>
           <br>
                 <ion-buttons class="btncentrado">
-                               
+
                   <ion-button slot="primary" color="primary" fill="outline" id="ingresar" (click)="crearUsuario()">
                     Crear
                   </ion-button>
@@ -71,45 +71,38 @@
                     Limpiar
                   </ion-button>
                 </ion-buttons>
-  
+
         </ion-card-content>
       </ion-card>
-   
-
-    <ion-footer collapse="fade">
-      <ion-grid>
-        <ion-toolbar class="centrado">
-          <ion-title>Informaciones</ion-title>
-        </ion-toolbar>
-        <ion-toolbar>
-          <ion-row class="centrado">
-            <ion-col size="2">
-              <ion-icon name="mail-outline"></ion-icon>
-            </ion-col>
-            <ion-col size="10">
-              <label>contacto@appanime.cl</label>
-            </ion-col>
-           
-          </ion-row>
-          <ion-row justify-content-center class="centrado" >
-            <ion-col size="2">
-              <ion-icon name="call-outline"></ion-icon>
-            </ion-col>
-            <ion-col size="10">
-              <label>+56998870456</label>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col size="12" class="centrado">
-                <ion-icon name="navigate-outline"></ion-icon>
-                <label>&nbsp;Froilán Roa 7107, La Florida</label>
-              </ion-col>
-          </ion-row>
-        </ion-toolbar>
-      </ion-grid>
-    </ion-footer>
 
   </div>
-  </ion-content>
-  
-  
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-row>
+    <ion-col>
+      <hr>
+      <ion-title>Informaciones</ion-title>
+    </ion-col>
+  </ion-row>
+  <hr>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="mail-outline"></ion-icon>
+      &nbsp;<label>contacto@appJuegos.cl</label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="call-outline"></ion-icon>
+      &nbsp;<label>+56998870456</label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="navigate-outline"></ion-icon>
+      &nbsp;<label>Froilán Roa 7107, La Florida</label>
+    </ion-col>
+  </ion-row>
+  <hr>
+</ion-footer>

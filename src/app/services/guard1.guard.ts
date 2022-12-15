@@ -20,11 +20,12 @@ export class Guard1Guard implements CanActivate {
     state: RouterStateSnapshot):  Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(this.fireBD.getUser().uid!=null){
       return true;
-    }
+    }else{
       this.router.navigate['/login']
       return false;
-        
-      
+    }
+
   }
-  
-}
+
+
+    }
